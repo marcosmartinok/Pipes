@@ -16,14 +16,14 @@ namespace CompAndDel
     {
         static void Main(string[] args)
         {
-            string img = @"C:\Users\Paco\Marcos\POO\PII_Conceptos_De_POO\Ejercicios\PII_COGNITIVE_API_AWS\src\Program\yacht.jpg";
+            string img = @"C:\Users\Paco\Marcos\POO\PII_Conceptos_De_POO\Ejercicios\PII_COGNITIVE_API_AWS\src\Program\bill2.jpg";
               
             PictureProvider picProvider = new PictureProvider();
             IPicture picture = picProvider.GetPicture(img);
                
             IFilter greyScale = new FilterGreyscale();
             IFilter negative = new FilterNegative();
-            IFilter faceCondition = new FilterFaceConditional();
+            IConditionalFIlter faceCondition = new FilterFaceConditional();
             IFilter tweet = new FilterTwitter();
 
             IPipe nullPipe = new PipeNull();           
